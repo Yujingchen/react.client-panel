@@ -4,6 +4,7 @@ import AppNavbar from "./components/layout/AppNavbar";
 import Dashboard from "./components/layout/Dashboard";
 import store from "./store";
 import { Provider } from "react-redux";
+
 class App extends Component {
   render() {
     return (
