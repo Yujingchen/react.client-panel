@@ -12,6 +12,7 @@ class Clients extends Component {
 
   static getDerivedStateFromProps(props, state) {
     const { clients } = props;
+    // destruction clients from props
     if (clients) {
       //Add balances
       const total = clients.reduce((total, client) => {
@@ -97,5 +98,6 @@ export default compose(
   firestoreConnect([{ collection: "clients" }]),
   connect((state, props) => ({
     clients: state.firestore.ordered.clients
+    //clients in firestore.oredered now is stored in this.props.clients
   }))
 )(Clients);
