@@ -5,6 +5,7 @@ import Dashboard from "./components/layout/Dashboard";
 import store from "./store";
 import { Provider } from "react-redux";
 import AddClients from "./components/clients/AddClient";
+import ClientDetials from "./components/clients/ClientDetails";
 
 class App extends Component {
   render() {
@@ -17,6 +18,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/" component={Dashboard} />
                 <Route exact path="/client/add" component={AddClients} />
+                <Route exact path="/client/:id" component={ClientDetials} />
               </Switch>
             </div>
           </div>
