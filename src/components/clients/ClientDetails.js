@@ -108,7 +108,7 @@ class ClientDetails extends Component {
                     <span
                       className={classnames({
                         "text-danger": client.balance > 0,
-                        "text-success": client.balance == 0
+                        "text-success": client.balance === 0
                       })}
                     >
                       ${parseFloat(client.balance).toFixed(2)}
