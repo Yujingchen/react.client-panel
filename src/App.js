@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import AddClients from "./components/clients/AddClient";
 import ClientDetials from "./components/clients/ClientDetails";
 import EditClient from "./components/clients/EditClient";
+import Login from "./components/auth/Login";
 
 class App extends Component {
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
                 <Route exact path="/client/add" component={AddClients} />
                 <Route exact path="/client/:id" component={ClientDetials} />
                 <Route exact path="/client/edit/:id" component={EditClient} />
+                <Route exact path="/login" component={Login} />
               </Switch>
             </div>
           </div>
