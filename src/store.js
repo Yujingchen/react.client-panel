@@ -38,7 +38,7 @@ const rootReducer = combineReducers({
   firebase: firebaseReducer,
   firestore: firestoreReducer, // <- firestoreneeded if using
   notify: notifyReducer,
-  setting: settingReducer
+  settings: settingReducer
 });
 
 //Create initial state

@@ -22,10 +22,19 @@ class ClientDetails extends Component {
     const { firestore, client } = this.props;
     const { balanceUpdateAmount } = this.state;
     //Update in firestore
-    const clientUpdate = {
-      balance: parseFloat(balanceUpdateAmount)
-    };
+    let clientUpdate;
+    if (balanceUpdateAmount === "") {
+      clientUpdate = {
+        balance: 0
+      };
+    } else {
+      clientUpdate = {
+        balance: parseFloat(balanceUpdateAmount)
+      };
+    }
+
     //Update in firestore
+
     firestore.update({ collection: "clients", doc: client.id }, clientUpdate);
     //add newClient document into clients collection
   };
