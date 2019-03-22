@@ -1,3 +1,4 @@
+//react-router v4 + redux-auth-wrapper v2
 import locationHelperBuilder from "redux-auth-wrapper/history4/locationHelper";
 import { connectedRouterRedirect } from "redux-auth-wrapper/history4/redirect";
 // import createHistory from "history/createBrowserHistory";
